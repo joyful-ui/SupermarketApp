@@ -122,6 +122,7 @@ app.post('/register', validateRegistration, (req, res) => {
         if (err) {
             throw err;
         }
+        console.log(result);
         req.flash('success', 'Registration successful! Please log in.');
         res.redirect('/login');
     });
